@@ -7,7 +7,8 @@ const db = client.db("umayer-database");
 
 export const auth = betterAuth({
     emailAndPassword: { 
-        enabled: true, 
+        enabled: true,
+        // requireEmailVerification: true, 
     },
     database: mongodbAdapter(db, {
         
