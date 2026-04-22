@@ -19,6 +19,12 @@ const Navbar = () => {
             <li>
               <Link href="/about">About</Link>
             </li>
+            <li>
+              <Link href="/auth/signup">SignUp</Link>
+            </li>
+            <li>
+              <Link href="/auth/signin">SignIn</Link>
+            </li>
           </ul>
         </header>
       </nav>
