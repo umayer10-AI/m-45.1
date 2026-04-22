@@ -46,7 +46,7 @@ const page = () => {
         }}
       >
         <Label>Email</Label>
-        <Input placeholder="john@example.com" />
+        <Input name='email' placeholder="Enter your email" />
         <FieldError />
       </TextField>
       {/* password */}
@@ -69,7 +69,7 @@ const page = () => {
         }}
       >
         <Label>Password</Label>
-        <Input placeholder="Enter your password" />
+        <Input name='password' placeholder="Enter your password" />
         <Description>Must be at least 8 characters with 1 uppercase and 1 number</Description>
         <FieldError />
       </TextField>
