@@ -6,9 +6,9 @@ import React from "react";
 
 const Navbar = () => {
 
-  const {data, isPening} = useSession()
+  const {data, isPending} = useSession()
 
-  if(isPening){
+  if(isPending){
       return <p>Loading...</p>
   }
   console.log(data)
