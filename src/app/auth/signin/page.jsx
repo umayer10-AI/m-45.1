@@ -13,41 +13,25 @@ const page = () => {
         const userData = Object.fromEntries(formData.entries())
         console.log(userData)
 
-        const { data, error } = await authClient.signUp.email({
-            name: userData.name,
+        const { data, error } = await authClient.signIn.email({
             email: userData.email,
             password: userData.password,
+            rememberMe: true,
             callbackURL: "/",
         });
 
-        console.log({data,error})
+        console.log(data)
 
-        if(data){
-            alert("Data Successfully")
-        }
-        if(error){
-            alert("Data undefined")
-        }
+        // if(data){
+        //     alert("Data Successfully")
+        // }
+        // if(error){
+        //     alert("Data undefined")
+        // }
     };
 
   return (
     <Form className="flex w-96 flex-col gap-4" onSubmit={onSubmit}>
-
-        {/* name */}
-        <TextField
-            isRequired
-            name="name"
-            validate={(value) => {
-              if (value.length < 3) {
-                return "Name must be at least 3 characters";
-              }
-              return null;
-            }}
-          >
-            <Label>Name</Label>
-            <Input placeholder="John Doe" />
-            <FieldError />
-          </TextField>
 
         {/* email */}
       <TextField
